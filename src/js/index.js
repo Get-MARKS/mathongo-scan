@@ -89,7 +89,7 @@ window.addEventListener('DOMContentLoaded', () => {
       copiedText = `//${copiedText}`;
     }
 
-    window.open(copiedText, '_blank', 'toolbar=0,location=0,menubar=0');
+    window.open(copiedText, '_self', 'toolbar=0,location=0,menubar=0');
     copiedText = null;
     hideDialog();
   }
@@ -113,6 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
       scanningEle.style.display = 'none';
       appScanningEle.style.display = 'none';
       if (isURL(result)) {
+        // directly call 
         dialogOpenBtnElement.style.display = 'inline-block';
       }
       dialogElement.classList.remove('app__dialog--hide');
